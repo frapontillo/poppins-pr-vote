@@ -80,7 +80,7 @@ function handleFirstResponse(issueNumber) {
     .then(function (newComment) {
       return newComment;
     })
-    .fail(commonFail);;
+    .fail(commonFail);
 }
 
 /**
@@ -265,17 +265,20 @@ function getInitialPoppinsComment(issueNumber) {
  * @returns {Object} of yays, nays and entropy.
  */
 function getUpdatedVoteParams(firstComment, vote) {
-  var yays = parseInt(firstComment.body.match(new RegExp('(?:' + escapeRegExp(yaysTag) + ')([0-9]+)'))[1], 10);
-  var nays = parseInt(firstComment.body.match(new RegExp('(?:' + escapeRegExp(naysTag) + ')([0-9]+)'))[1], 10);
+  var yaysMatch = firstComment.body.match(new RegExp('(?:' + escapeRegExp(yaysTag) + ')([0-9]+)')) || [0,0];
+  var naysMatch = firstComment.body.match(new RegExp('(?:' + escapeRegExp(naysTag) + ')([0-9]+)')) || [0,0];
+  var yays = parseInt(yaysMatch[1], 10);
+  var nays = parseInt(naysMatch[1], 10);
   if (vote > 0) {
     yays += vote;
   } else if (vote < 0) {
     nays -= vote;
   }
+  var entropy = Abacus.entropy(yays, nays).toFixed(4);
   return {
     yays: yays,
     nays: nays,
-    entropy: Abacus.entropy(yays, nays).toFixed(4)
+    entropy: _.isNumber(entropy) ? entropy : 'not available'
   };
 }
 
@@ -394,4 +397,5 @@ function escapeRegExp(str) {
  */
 function commonFail(error) {
   console.error(error.toString());
+  throw error;
 }
