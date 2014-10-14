@@ -274,11 +274,11 @@ function getUpdatedVoteParams(firstComment, vote) {
   } else if (vote < 0) {
     nays -= vote;
   }
-  var entropy = Abacus.entropy(yays, nays).toFixed(4);
+  var entropy = Abacus.entropy(yays, nays);
   return {
     yays: yays,
     nays: nays,
-    entropy: _.isNumber(entropy) ? entropy : 'not available'
+    entropy: _.isNumber(entropy) ? entropy.toFixed(4) : 'not available'
   };
 }
 
