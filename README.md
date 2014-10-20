@@ -30,8 +30,8 @@ module.exports = function (poppins) {
 
   // pr vote main settings
   poppins.plugins.prVote.greeting = 'Thanks for the PR!';
-  poppins.plugins.prVote.responseBody: 'Yes/No: <%= yays %>/<%= nays %>\nEntropy: <%= entropy %>';
-  poppins.plugins.prVote.closing = 'See ya.';
+  poppins.plugins.prVote.responseBody: 'Yays: <%= yays %>\nNays: <%= nays %>\nEntropy: <%= entropy %>';
+  poppins.plugins.prVote.closing = 'Farewell.';
 
   // pr vote configuration
   poppins.plugins.prVote.voteYay = ':+1:';
@@ -85,25 +85,25 @@ Defaults to `":x:"`.
 
 ### `poppins.plugins.prVote.labelEntropyLow`
 
-Label added to a PR if the votes entropy is lower than [`poppins.plugins.prVote.thresholdMaxLowEntropy`](#poppinspluginsprVotethresholdMaxLowEntropy).
+Label added to a PR if the votes entropy is lower than [`poppins.plugins.prVote.thresholdMaxLowEntropy`](#poppinspluginsprVotethresholdmaxlowentropy).
 Defaults to `"pr:nice"`. Optional, if `undefined`, such label won't be added/removed.
 
 
 ### `poppins.plugins.prVote.labelEntropyHigh`
 
-Label added to a PR if the votes entropy is higher than [`poppins.plugins.prVote.thresholdMinHighEntropy`](#poppinspluginsprVotethresholdMinHighEntropy).
+Label added to a PR if the votes entropy is higher than [`poppins.plugins.prVote.thresholdminhighentropy`](#poppinspluginsprVotethresholdMinHighEntropy).
 Defaults to `"pr:mess"`. Optional, if `undefined`, such label won't be added/removed.
 
 
 ### `poppins.plugins.prVote.labelYay`
 
-Label added to a PR if the voting proportion outcome is positive (higher than [`poppins.plugins.prVote.thresholdAcceptableVote`](#poppinspluginsprVotethresholdAcceptableVote)).
+Label added to a PR if the voting proportion outcome is positive (higher than [`poppins.plugins.prVote.thresholdacceptablevote`](#poppinspluginsprVotethresholdAcceptableVote)).
 Defaults to `"pr:yay"`. Optional, if `undefined`, such label won't be added/removed.
 
 
 ### `poppins.plugins.prVote.labelNay`
 
-Label added to a PR if the voting outcome is negative (lower than [`poppins.plugins.prVote.thresholdAcceptableVote`](#poppinspluginsprVotethresholdAcceptableVote)).
+Label added to a PR if the voting outcome is negative (lower than [`poppins.plugins.prVote.thresholdacceptablevote`](#poppinspluginsprVotethresholdAcceptableVote)).
 Defaults to `"pr:nay"`. Optional, if `undefined`, such label won't be added/removed.
 
 
