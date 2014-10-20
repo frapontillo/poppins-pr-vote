@@ -9,6 +9,13 @@ poppins-pr-vote
 
 ![poppins-pr-vote in action](https://raw.github.com/frapontillo/poppins-pr-vote/master/img/in-action.png)
 
+While **yes** and **no** counts are pretty much self-explanatory, the [**entropy**](http://en.wikipedia.org/wiki/Entropy_%28information_theory%29#Rationale) gives you a compact idea of how "messy" the PR is if related to people's votes: 
+
+![Entropy for dummies LOL](http://upload.wikimedia.org/math/3/2/8/328a1ee1f0db87e7c6aefa87efcac491.png)
+
+`poppins-pr-vote` can also **label** PRs according to both votes and entropy.
+
+
 ## Install
 
 `npm install poppins-pr-vote`
@@ -17,6 +24,8 @@ poppins-pr-vote
 
 
 ## Configure
+
+Before setting up the plugin, you need to edit the Webhook created by mary-poppins (via the [`install` CLI option](https://github.com/btford/mary-poppins#lets-get-poppin)) by enabling the `pull_request_review_comment`, named "Pull Request review comment - Pull Request diff commented on".
 
 To use this plugin, you need to load it in your config file with `couldYouPlease`:
 
