@@ -1,7 +1,7 @@
 {
   "name": "poppins-pr-vote",
   "version": "0.0.1",
-  "description": "Plugin for btford/mary-poppins that keeps track of votes in a PR.",
+  "description": "btford/mary-poppins plugin for keeping track of votes in PRs.",
   "main": "plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
