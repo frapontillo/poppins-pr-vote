@@ -79,7 +79,7 @@ mary-poppins install config.js
 In the same directory of your `config.js` file, run:
 
 ```shell
-npm install poppins-pr-vote`
+npm install poppins-pr-vote
 ```
 
 ![run to mary oh sweet mary](https://raw.github.com/frapontillo/poppins-pr-vote/master/img/run-to-mary-poppins.png)
