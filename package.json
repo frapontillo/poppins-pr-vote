@@ -1,6 +1,6 @@
 {
   "name": "poppins-pr-vote",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "btford/mary-poppins plugin for keeping track of votes in PRs.",
   "main": "plugin.js",
   "scripts": {
