@@ -397,5 +397,4 @@ function escapeRegExp(str) {
  */
 function commonFail(error) {
   console.error(error.toString());
-  throw error;
 }
