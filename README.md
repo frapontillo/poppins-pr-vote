@@ -232,4 +232,4 @@ mary-poppins start config.js
 
 [npm-url]: https://npmjs.org/package/poppins-pr-vote
 [npm-version-image]: http://img.shields.io/npm/v/poppins-pr-vote.svg?style=flat
-[npm-downloads-image]: http://img.shields.io/npm/dm/hpoppins-pr-vote.svg?style=flat
+[npm-downloads-image]: http://img.shields.io/npm/dm/poppins-pr-vote.svg?style=flat
